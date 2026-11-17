@@ -59,7 +59,7 @@ p{max-width:58ch;text-wrap:pretty}
 .sonne{display:none}:root[data-theme=dunkel] .sonne{display:block}:root[data-theme=dunkel] .mond{display:none}
 @media (max-width:860px){.menue{display:none}.kopf .werkz{margin-inline-start:auto}}
 
-@media (max-width:560px){.kopf .knopf.haupt{display:none}.held-bg svg.bogen{opacity:.28}.held-bg svg.muster{opacity:.1}}
+@media (max-width:560px){.kopf .knopf.haupt{display:none}.held-bg svg.muster{opacity:.1}}
 /* Knöpfe */
 .knopf{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:999px;border:1.5px solid var(--gold-d);font:600 1.05rem var(--fliess);text-decoration:none;cursor:pointer;transition:transform .25s,box-shadow .25s,background .25s,color .25s}
 .knopf.haupt{background:var(--gold-d);color:var(--auf-gold);box-shadow:0 10px 28px -10px var(--glow)}
@@ -90,10 +90,11 @@ p{max-width:58ch;text-wrap:pretty}
 .held-bg{position:absolute;inset:0;z-index:-1;pointer-events:none}
 .held-bg .schein{position:absolute;left:62%;top:46%;width:min(92vw,1000px);aspect-ratio:1;transform:translate(-50%,-50%);background:radial-gradient(closest-side,var(--glow),transparent 70%);opacity:.55;transition:transform .2s}
 .held-bg svg.muster{position:absolute;inset:0;width:100%;height:100%;opacity:.16;color:var(--gold-d);-webkit-mask-image:radial-gradient(62% 70% at 62% 50%,#000,transparent);mask-image:radial-gradient(62% 70% at 62% 50%,#000,transparent)}
-.held-bg svg.bogen{position:absolute;left:62%;top:50%;height:112%;transform:translate(-50%,-50%);color:var(--gold-d);opacity:.5;will-change:transform}
-.titel-rahmen{position:relative;display:grid;place-items:end center;width:clamp(118px,9.5vw,142px);aspect-ratio:120/150;margin-bottom:12px;color:var(--gold-d);filter:drop-shadow(0 0 18px var(--glow))}
-.titel-rahmen svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.ar-titel{position:relative;font-size:clamp(1.9rem,2.9vw,2.4rem);color:var(--gold);line-height:1;margin:0 0 24%}
+.held-bg svg.bogen{position:absolute;left:62%;top:50%;height:112%;transform:translate(-50%,-50%);color:var(--gold-d);opacity:.5;will-change:transform;-webkit-mask-image:linear-gradient(transparent 0,#000 16%,#000 78%,transparent 98%);mask-image:linear-gradient(transparent 0,#000 16%,#000 78%,transparent 98%)}
+.bogen-m{display:none}
+.titel-rahmen{display:inline-flex;flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:16px;color:var(--gold-d)}
+.ar-titel{font-size:clamp(2.4rem,3.6vw,3.1rem);color:var(--gold);line-height:1.2;margin:0;text-shadow:0 0 28px var(--glow)}
+.titel-zier{display:block;width:150px;height:12px;overflow:visible}
 .ar-unter{font-size:1rem;color:var(--leise);margin-bottom:22px;letter-spacing:.02em;text-align:left}
 .held h1{margin-bottom:24px}
 .lead{font-size:clamp(1.15rem,1.2vw + .9rem,1.4rem);color:var(--leise);max-width:46ch}
@@ -108,7 +109,8 @@ p{max-width:58ch;text-wrap:pretty}
 .fl.r3{width:34px;left:14%;bottom:12%;color:var(--gold-l);opacity:.8}
 .fl.p1,.fl.p2,.fl.p3,.fl.p4{width:12px;aspect-ratio:1;border-radius:50%;background:var(--gold-l);filter:blur(1.5px);box-shadow:0 0 18px 4px var(--glow)}
 .fl.p1{left:2%;top:40%}.fl.p2{right:12%;top:20%;width:8px}.fl.p3{right:2%;bottom:8%;width:16px;filter:blur(4px)}.fl.p4{left:28%;top:6%;width:6px}
-@media (max-width:900px){.held .wrap{grid-template-columns:1fr}.held{padding-top:96px}.buehne{min-height:0;margin-top:28px}.held-bg svg.bogen{left:50%;top:70%}.held-bg .schein{left:50%;top:70%}}
+@media (max-width:900px){.held .wrap{grid-template-columns:1fr}.held{padding-top:96px}.buehne{min-height:0;margin-top:28px;isolation:isolate}.held-bg svg.bogen{display:none}.held-bg .schein{left:50%;top:70%}.bogen-m{display:block;position:absolute;z-index:-1;left:50%;top:50%;width:min(112vw,460px);height:auto;aspect-ratio:200/260;transform:translate(-50%,-50%);color:var(--gold-d);opacity:.42;pointer-events:none;-webkit-mask-image:linear-gradient(transparent 0,#000 24%,#000 70%,transparent 100%);mask-image:linear-gradient(transparent 0,#000 24%,#000 70%,transparent 100%)}}
+@media (max-width:560px){.bogen-m{opacity:.34}}
 
 /* Hadith */
 .szene{position:relative}
@@ -126,8 +128,8 @@ p{max-width:58ch;text-wrap:pretty}
 .had-de.an,.had-q.an{opacity:1;transform:none}
 .no-js .had-ar .w,.no-js .had-de,.no-js .had-q{opacity:1;transform:none}
 .satz{padding:var(--abschnitt) 0 calc(var(--abschnitt)*.6)}
-.satz .gross{font:500 clamp(2rem,5vw,4rem)/1.12 var(--kopf);letter-spacing:-.02em;max-width:18ch}
-.satz .gross.zweit{color:var(--leise);margin-top:.2em}
+.satz .gross{font:500 clamp(1.8rem,4.4vw,3.4rem)/1.14 var(--kopf);letter-spacing:-.02em;max-width:28ch;margin-inline:auto;text-align:center}
+.satz .gross.zweit{color:var(--leise);margin-top:.5em}
 .satz .gross em{font-style:normal;color:var(--gold)}
 
 /* Tag */
@@ -282,7 +284,8 @@ p{max-width:58ch;text-wrap:pretty}
 /* Daten, Unterricht, Schluss */
 .daten-chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
 .daten-chips span{display:inline-flex;align-items:center;gap:10px;border:1px solid var(--rand);background:var(--karte);border-radius:999px;padding:10px 20px;font-size:1.02rem}
-.daten-chips svg{width:18px;height:18px;color:var(--gold-d)}
+.daten-chips svg{width:18px;height:18px;color:var(--gold-d);flex:none}
+@media (max-width:640px){.daten-chips{display:grid;grid-template-columns:1fr 1fr;gap:10px}.daten-chips span{padding:10px 12px;gap:8px;font-size:.9rem;border-radius:22px}.daten-chips svg{width:16px;height:16px}}
 .zwei{display:grid;grid-template-columns:1fr 1fr;gap:clamp(30px,6vw,96px)}
 .zwei p{color:var(--leise)}
 .zwei .knopf{margin-top:26px}
@@ -327,3 +330,5 @@ p{max-width:58ch;text-wrap:pretty}
   .stufen .stufe i{transition:none}.stufen .stufe i,.zeit::after,.zeit .pkt{transition:none}
   .stufen .stufe i{background:var(--gold-d)}.zeit::after{transform:scaleX(1)}.zeit .pkt{transform:scale(1)}
 }
+/* Schmale Ansicht: Fließtexte füllen die ganze Breite, ohne Leerraum rechts; der Kernsatz steht mittig und näher am Rand */
+@media (max-width:900px){p,.lead,.farblegende,.karte-fuss p,.breit-text,.fuss p,.recht p,.recht li{max-width:none}.satz .wrap{padding-inline:14px}.satz .gross{max-width:none}}
