@@ -306,6 +306,7 @@ p{max-width:58ch;text-wrap:pretty}
 .fuss a.logo{display:flex;padding:0}
 .fuss a:hover{color:#e9cf95}
 .fuss p{max-width:62ch;font-size:.9rem;margin-top:14px;flex-basis:100%}
+.fuss p a{display:inline;padding:0;text-decoration:underline;text-decoration-color:rgba(239,230,210,.4);text-underline-offset:3px}
 
 /* Rechtsseiten */
 .recht{padding:130px 0 90px}
