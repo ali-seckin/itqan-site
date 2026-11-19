@@ -95,7 +95,7 @@ p{max-width:var(--lese);text-wrap:pretty}
 .bogen-m{display:none}
 .titel-rahmen{display:inline-flex;flex-direction:column;align-items:flex-start;gap:12px;margin-bottom:16px;color:var(--gold-d)}
 .ar-titel{font-size:clamp(2.4rem,3.6vw,3.1rem);color:var(--gold);line-height:1.2;margin:0;text-shadow:0 0 28px var(--glow)}
-.kalli{display:block;width:clamp(190px,18vw,250px);height:auto;filter:drop-shadow(0 0 22px var(--glow))}
+.kalli{display:block;width:clamp(162px,15.3vw,212px);height:auto;filter:drop-shadow(0 0 22px var(--glow))}
 .titel-zier{display:block;width:150px;height:12px;overflow:visible}
 .ar-unter{font-size:var(--t-klein);color:var(--leise);margin-bottom:22px;letter-spacing:.02em;text-align:left}
 .held h1{margin-bottom:24px;font-size:clamp(2.9rem,5.2vw,4.6rem)}
@@ -294,7 +294,7 @@ p{max-width:var(--lese);text-wrap:pretty}
 .schluss::before{content:'';position:absolute;left:50%;top:50%;width:min(120vw,1100px);aspect-ratio:1;transform:translate(-50%,-50%);background:radial-gradient(closest-side,rgba(233,207,149,.3),transparent 70%);z-index:-1;animation:atmen 9s ease-in-out infinite}
 @keyframes atmen{50%{transform:translate(-50%,-50%) scale(1.1);opacity:.8}}
 .schluss .ar{font-size:clamp(2.4rem,6vw,4.6rem);color:#e9cf95;line-height:1.4}
-.kalli-schluss{display:block;width:clamp(230px,36vw,400px);height:auto;margin:0 auto;filter:drop-shadow(0 0 30px rgba(233,207,149,.28))}
+.kalli-schluss{display:block;width:clamp(196px,30.6vw,340px);height:auto;margin:0 auto;filter:drop-shadow(0 0 30px rgba(233,207,149,.28))}
 .schluss h2{margin:14px auto 0;max-width:none;color:#efe6d2}
 .schluss p{margin:18px auto 0;color:#a9b6bb}
 .schluss .cta{justify-content:center}
