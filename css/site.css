@@ -332,3 +332,9 @@ p{max-width:var(--lese);text-wrap:pretty}
 /* Schmale Ansicht: Fließtexte füllen die ganze Breite, ohne Leerraum rechts; der Kernsatz steht mittig und näher am Rand */
 @media (max-width:900px){p,.lead,.farblegende,.karte-fuss p,.breit-text,.fuss p,.recht p,.recht li{max-width:none}.satz .wrap{padding-inline:14px}.satz .gross{max-width:none}}
 .klein{font-size:var(--t-klein)}
+/* Handy: Fließtext füllt die Breite der Elemente darunter (Blocksatz mit Silbentrennung statt ausgefranstem rechtem Rand), Knöpfe im Kopfbereich mittig */
+@media (max-width:900px){
+  .kopfblock p,.meth-text p,.mus-grid p,.werk-grid p,.spr-gitter p,.zwei p,.held .lead,.held-note,.karte-fuss p,.recht p,.recht li{text-align:justify;hyphens:auto;-webkit-hyphens:auto;text-wrap:wrap;text-align-last:left}
+  .held .cta{justify-content:center}
+  .held-note{max-width:none}
+}
