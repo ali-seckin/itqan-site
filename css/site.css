@@ -316,7 +316,8 @@ p{max-width:var(--lese);text-wrap:pretty}
 .recht h1{font-size:var(--t-h2);margin-bottom:34px}
 .recht h2{font-size:var(--t-h3);max-width:none;margin:40px 0 12px}
 .recht p,.recht li{max-width:var(--lese);margin-top:10px;color:var(--text)}
-.recht ul{padding-left:1.2em}
+.recht ul,.recht ol{padding-left:1.2em}
+.recht h3{font-size:var(--t-h4);max-width:none;margin:28px 0 2px}
 .recht .hinweis{border:1px dashed var(--gold-d);border-radius:14px;padding:16px 20px;color:var(--leise);margin-bottom:26px}
 
 /* weniger Bewegung */
